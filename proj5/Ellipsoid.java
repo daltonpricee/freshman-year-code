@@ -9,9 +9,7 @@ import java.text.DecimalFormat;
 */
 public class Ellipsoid {
 /**
-* 
-* @param args Command line arguments (not used).
-* 
+* @param args Command line arguments (not used). 
 */
    //fields
    private String label = "";
@@ -36,9 +34,7 @@ public class Ellipsoid {
         
    //methods
    /**
-   * 
    * @return the name of the label
-   * 
    */
    public String getLabel() {   
       return label; 
@@ -47,7 +43,6 @@ public class Ellipsoid {
    /**
    * @param labelIn the label.
    * @return the name of the label.
-   * 
    */
    public boolean setLabel(String labelIn) {
     
@@ -57,10 +52,9 @@ public class Ellipsoid {
       } 
       return false;
    }
+   
    /**
-   * 
    * @return a the value of a
-   * 
    */            
    public double getA() {
       return a;     
@@ -68,29 +62,25 @@ public class Ellipsoid {
    /**
    * @param aIn the axis a.
    * @return false if aIn less than 0.
-   * 
    */   
    public boolean setA(double aIn) {
-     
-      if (aIn > 0) {
-         
+      if (aIn > 0) { 
          a = aIn;
          return true;
       }
       return false;             
    }  
-   /**
-   * 
+   
+   /** 
    * @return the value of b.
-   * 
    */         
    public double getB() { 
       return b;    
    }  
+   
    /**
    * @param bIn the label.
    * @return false if b less than 0.
-   * 
    */     
    public boolean setB(double bIn) {
       if (bIn > 0) {  
@@ -99,18 +89,17 @@ public class Ellipsoid {
       }
       return false;          
    } 
+   
    /**
-   * 
    * @return c the value of c
-   * 
    */            
    public double getC() {
       return c;   
    } 
+   
    /**
    * @param cIn the axis c.
    * @return false if cIn less than 0.
-   * 
    */   
    public boolean setC(double cIn) {
       if (cIn > 0) {  
@@ -119,29 +108,26 @@ public class Ellipsoid {
       }   
       return false;            
    }   
-   /**
-   * 
-   * @return v the value of v.
-   * 
+   
+   /** 
+   * @return v the value of v. 
    */       
    public double volume() {
       double v = 4 * Math.PI * ((a * b * c) / 3);
       return v;
    } 
+   
    /**
-   * 
    * @return s the value of s.
-   * 
    */       
    public double surfaceArea() {
       double s = 4 * Math.PI * (Math.pow((Math.pow(a * b, 1.6) 
          + Math.pow(a * c, 1.6) + Math.pow(b * c, 1.6)) / 3, 1 / 1.6));
       return s;                
    }
+   
    /**
-   * 
    * @return output the output of complete sentence.
-   * 
    */     
    public String toString() {   
       String output = "";
@@ -155,8 +141,5 @@ public class Ellipsoid {
              + "\n\tsurface area = " + formatter.format(surfaceArea()) 
              + " square units";   
       return output;
-   
    }
-}               
-       
-     
+}                    
